@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<dialog id="preferences_dialog" title="s4sagar Preferences"
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   buttons="accept,cancel"
+   buttonlabelcancel="Cancel"
+   buttonlabelaccept="Save Preferences"
+   ondialogaccept="return dialog_ok();"
+   ondialogcancel="return dialog_cancel();">
+<script type="application/x-javascript" src="chrome://s4sagar/content/script.js" />
+
+    <!--<dialogheader title="s4sagar Preferences" />-->
+    <dialogheader title="This feature will be available in the future versions." />
+    <groupbox title="Preferences">
+      <caption label="Set Proxy Settings"/>
+       <hbox><label value="Sample Server:"/>
+                <label value="000.111.222.333"  width="100" maxlength="15"/>
+            <label value="Port"/>
+                <label value="0000"  width="40" maxlength="4"/>
+      </hbox>
+      <hbox>
+            <label value="Proxy Server 1:"/>
+                <textbox id="tb_Proxy1" editable="true" width="100" maxlength="15" value=""/>
+            <label value="Port"/>
+                <textbox id="tb_ProxyPort1" editable="true" width="40" maxlength="4" value=""/>
+      </hbox>
+      <hbox><label value="Proxy Server 2:"/>
+                <textbox id="tb_Proxy2" editable="true" width="100" maxlength="15" value=""/>
+            <label value="Port"/>
+                <textbox id="tb_ProxyPort2" editable="true" width="40" maxlength="4" value=""/>
+      </hbox>
+      <hbox><label value="Proxy Server 3:"/>
+                <textbox id="tb_Proxy3" editable="true" width="100" maxlength="15" value=""/>
+            <label value="Port"/>
+                <textbox id="tb_ProxyPort3" editable="true" width="40" maxlength="4" value=""/>
+      </hbox>
+      <hbox><label value="Proxy Server 4:"/>
+                <textbox id="tb_Proxy4" editable="true" width="100" maxlength="15" value=""/>
+            <label value="Port"/>
+                <textbox id="tb_ProxyPort4" editable="true" width="40" maxlength="4" value=""/>
+      </hbox>
+   </groupbox>
+</dialog>

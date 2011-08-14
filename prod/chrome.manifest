@@ -1,0 +1,4 @@
+content s4sagar jar:chrome/s4sagar.jar!/content/
+overlay chrome://browser/content/browser.xul chrome://s4sagar/content/s4sagar.xul
+skin s4sagar classic/1.0 jar:chrome/s4sagar.jar!/skin/
+

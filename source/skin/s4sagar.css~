@@ -1,0 +1,100 @@
+#s4sagar-MainMenu {
+    list-style-image: url("chrome://s4sagar/skin/main.png");
+}
+
+#s4sagar-Combined-Button {
+    list-style-image: url("chrome://s4sagar/skin/combined.png");
+}
+
+#s4sagar-Combined-Web {
+    list-style-image: url("chrome://s4sagar/skin/web.png");
+}
+
+
+#s4sagar-Combined-Button > .toolbarbutton-menubutton-button {
+    -moz-box-orient: horizontal;
+}
+
+#s4sagar-Web-Button,
+#s4sagar-Combined-Web {
+    list-style-image: url("chrome://s4sagar/skin/web.png");
+}
+
+#s4sagar-Combined-Post-Button {
+    list-style-image: url("chrome://s4sagar/skin/tweet.png");
+}
+
+#s4sagar-Combined-Post-Button > .toolbarbutton-menubutton-button {
+    -moz-box-orient: horizontal;
+}
+
+
+#s4sagar-Tweet-Button,
+#s4sagar-Combined-Tweet {
+    list-style-image: url("chrome://s4sagar/skin/tweet.png");
+}
+
+#s4sagar-Face-Button,
+{
+    list-style-image: url("chrome://s4sagar/skin/facebook.png");
+}
+
+#s4sagar-Combined-Face {
+    list-style-image: url("chrome://s4sagar/skin/facebook.png");
+}
+
+
+#s4sagar-Combined-Image {
+    list-style-image: url("chrome://s4sagar/skin/images.png");
+}
+
+#s4sagar-ResizeBar {
+    background-image: url("chrome://s4sagar/skin/gripper.png");
+    min-height: 22px;
+    min-width: 3px;
+}
+#s4sagar-Gmail-Button {
+	list-style-image: url("chrome://s4sagar/skin/gmail.png");
+}
+
+#s4sagar-Parents-Corner-Button {
+	list-style-image: url("chrome://s4sagar/skin/sastra.png");
+	}
+
+#s4sagar-Youtube-Button {
+	list-style-image: url("chrome://s4sagar/skin/youtube.png");
+	}
+	
+#s4sagar-cric-Button {
+	list-style-image: url("chrome://s4sagar/skin/cric.png");
+	}
+	
+#s4sagar-orkut-Button {
+	list-style-image: url("chrome://s4sagar/skin/orkut.png");
+	}
+	
+#s4sagar-face-Button {
+	list-style-image: url("chrome://s4sagar/skin/facebook.png");
+	}	
+	
+	
+#s4sagar-news-Button {
+	list-style-image: url("chrome://s4sagar/skin/news.png");
+	}	
+
+#s4sagar-blog-Button {
+	list-style-image: url("chrome://s4sagar/skin/blogger.png");
+	}
+#s4sagar-word-Button {
+	list-style-image: url("chrome://s4sagar/skin/word.png");
+	}	
+#s4sagar-daksh-Button {
+	list-style-image: url("chrome://s4sagar/skin/daksh.png");
+	}	
+#s4sagar-Disable-Button {
+	list-style-image: url("chrome://s4sagar/skin/cric.png");
+	}
+#s4sagar-ResizeSplitter {
+    background: transparent;
+    border: none !important;
+}

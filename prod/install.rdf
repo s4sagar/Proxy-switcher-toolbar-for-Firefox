@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+    <Description about="urn:mozilla:install-manifest">
+
+        <!-- Required Items -->
+        <em:id>s4sagar@s4sagar.com</em:id>
+        <em:name>s4sagar's Toolbar</em:name>
+        <em:version>1.0</em:version>
+
+        <em:targetApplication>
+            <Description>
+                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+                <em:minVersion>1.5</em:minVersion>
+                <em:maxVersion>3.6.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+
+        <!-- Optional Items -->
+        <em:creator>Vidya Sagar S</em:creator>
+        <em:description>My First toolbar extension.</em:description>
+        <em:homepageURL>http://www.s4sagar.com/</em:homepageURL>
+
+    </Description>
+</RDF>
+

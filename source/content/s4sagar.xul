@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://s4sagar/skin/s4sagar.css" type="text/css"?>
+
+<overlay id="s4sagar-Overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+         
+    <script type="application/x-javascript"
+            src="chrome://s4sagar/content/s4sagar.js" />
+            
+    <toolbox id="navigator-toolbox">
+    
+        <toolbar id="s4sagar-Toolbar" toolbarname="s4sagar's Toolbar" accesskey="T"
+                 class="chromeclass-toolbar" context="toolbar-context-menu" 
+                 hidden="false" persist="hidden">
+                 
+            <toolbaritem flex="0">
+                <toolbarbutton id="s4sagar-MainMenu" type="menu"
+                               tooltiptext="Toolbar Main Menu">
+                    <menupopup>
+                        <menuitem label="Share This" accesskey="S"
+                                  tooltiptext="Share this with Friends"
+				  oncommand="s4sagar_linkify(event, 'share')" />
+			<menuitem label="Tweet This" accesskey="S"
+                                  tooltiptext="Share this with Friends"
+				  oncommand="s4sagar_linkify(event, 'tweet')" />
+
+                        <menuseparator />
+                        
+                        <menuitem label="Developer's Blog" accesskey="B"
+                                  tooltiptext="Navigate to Vidya Sagar's Blog"
+                                  oncommand="s4sagar_LoadURL('http://www.s4sagar.wordpress.com/')" />
+                    </menupopup>
+                </toolbarbutton>
+            </toolbaritem >
+	    <toolbaritem flex="0">
+                <toolbarbutton id="s4sagar-Combined-Post-Button" label="Publish"
+                               type="menu-button" tooltiptext="Publish This Page"
+                               oncommand="s4sagar_Search(event, 'publisht')">	
+                    <menupopup>
+                        <menuitem id="s4sagar-Combined-Tweet" label="To Twitter"
+                                  class="menuitem-iconic" tooltiptext="Publish to Twitter"
+                                  oncommand="s4sagar_Search(event, 'publisht'); event.stopPropagation();" />
+                    
+                        <menuitem id="s4sagar-Combined-Face" label="To Facebook"
+                                  class="menuitem-iconic" tooltiptext="Publish to Facebook"
+                                  oncommand="s4sagar_Search(event, 'publishf'); event.stopPropagation();" />
+                    </menupopup>
+                </toolbarbutton>
+                <toolbarseparator />
+                </toolbaritem>
+		
+            
+            <toolbaritem id="s4sagar-SearchTerms-TBItem" persist="width" >
+                <menulist id="s4sagar-SearchTerms" editable="true" flex="1"
+                          minwidth="100" width="250"
+                          onkeypress="s4sagar_KeyHandler(event);"
+                          tooltiptext="Google Search">
+                    <!-- This is a comment menupop id="s4sagar-SearchTermsMenu" onpopupshowing="s4sagar_Populate()" /> -->
+                </menulist>
+            </toolbaritem>
+            
+            <splitter id="s4sagar-ResizeSplitter" state="open" collapse="none"
+                      resizebefore="closest" resizeafter="farthest"
+                      tooltiptext="Resize the Search Box">
+                <vbox id="s4sagar-ResizeBar" />
+            </splitter>
+            
+            <toolbaritem flex="0">
+                <toolbarbutton id="s4sagar-Tweet-Button" tooltiptext="Post typed text as Tweet"
+                               label="Post Tweet" oncommand="s4sagar_Search(event, 'posttweet')" />                               
+            	<toolbarseparator />
+            	<toolbarbutton id="s4sagar-Web-Button" tooltiptext="Search Wikipedia"
+                               label="Search Wikipedia" oncommand="s4sagar_Search(event, 'wiki')" />
+                <toolbarseparator />
+                <toolbarbutton id="s4sagar-Combined-Button" label="Web Search"
+                               type="menu-button" tooltiptext="Combined Search"
+                               oncommand="s4sagar_Search(event, 'web')">	
+                    <menupopup>
+                        <menuitem id="s4sagar-Combined-Web" label="Web Search"
+                                  class="menuitem-iconic" tooltiptext="Search the Web"
+                                  oncommand="s4sagar_Search(event, 'web'); event.stopPropagation();" />
+                    
+                        <menuitem id="s4sagar-Combined-Image" label="Image Search"
+                                  class="menuitem-iconic" tooltiptext="Search Images"
+                                  oncommand="s4sagar_Search(event, 'image'); event.stopPropagation();" />
+                    </menupopup>
+                </toolbarbutton>
+                <toolbarseparator />
+                <toolbarbutton id="s4sagar-Parents-Corner-Button" tooltiptext="Parent's Corner"
+                               label=" " oncommand="s4sagar_linkify(event, 'parents');" />
+                 
+                 <toolbarbutton id="s4sagar-Gmail-Button" tooltiptext="Gmail"
+                               label=" " oncommand="s4sagar_linkify(event, 'GMAIL');" />
+                 <toolbarbutton id="s4sagar-Youtube-Button" tooltiptext="YouTube"
+                               label=" " oncommand="s4sagar_linkify(event, 'tube');" />
+                               
+                 <toolbarbutton id="s4sagar-cric-Button" tooltiptext="Cricinfo"
+                               label=" " oncommand="s4sagar_linkify(event, 'cric');" />
+                               
+                 <toolbarbutton id="s4sagar-orkut-Button" tooltiptext="Orkut"
+                               label=" " oncommand="s4sagar_linkify(event, 'orkut');" />              
+                 <toolbarbutton id="s4sagar-face-Button" tooltiptext="Facebook"
+                               label=" " oncommand="s4sagar_linkify(event, 'face');" />   
+		<toolbarbutton id="s4sagar-blog-Button" tooltiptext="Blogger"
+                               label=" " oncommand="s4sagar_linkify(event, 'blog');" />                               
+		<toolbarbutton id="s4sagar-word-Button" tooltiptext="Wordpress"
+                               label=" " oncommand="s4sagar_linkify(event, 'word');" />
+            </toolbaritem>
+            <toolbarseparator />
+            <toolbaritem>
+                        <toolbarbutton id="s4sagar-Disable-Button" label="Disable"
+                               tooltiptext="Click to toggle proxy usage"
+                               oncommand="checkUsage(this);" >
+                        </toolbarbutton>
+		</toolbaritem>
+
+                <toolbaritem>
+                                <menulist id="menuList" width="150" tooltiptext="Select Your Proxy Server">
+                                <menupopup width="150">
+                                    <menuitem label="172.16.30.30:8080" id="menuitem_4" oncommand="setProxy(this);"/>	
+                                    <menuitem label="172.16.1.5:8080" id="menuitem_2" oncommand="setProxy(this);"/>
+                                    <menuitem label="172.16.1.6:8080" id="menuitem_3" oncommand="setProxy(this);"/>
+                                    <menuitem label="172.16.1.4:8080" id="menuitem_1" oncommand="setProxy(this);"/>
+                                    
+                               </menupopup>
+                               </menulist>
+		</toolbaritem>
+
+                <toolbarspring />
+            
+            <toolbarspring />
+
+        </toolbar>
+    </toolbox>
+</overlay>
+
